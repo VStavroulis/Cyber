@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  cyberdb:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+
+  cyber:
+    image: ${DOCKER_REGISTRY-}cyber
+    build:
+      context: .
+      dockerfile: Cyber\Dockerfile
