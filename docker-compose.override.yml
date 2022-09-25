@@ -4,22 +4,17 @@ services:
   cyberdb:
     container_name: cyberdb
     environment:
-        SA_PASSWORD: "SwN12345678"
+        SA_PASSWORD: "Sw!12345678"
         ACCEPT_EULA: "Y"
     restart: always
     ports:
         - "1433:1433"
-
   cyber:
     container_name: cyber.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-       - "ConnectionStrings:CyberConnectionString=Server=cyber;Database=cyberDb;User Id=sa;Password=SwN12345678"  
+      - "ConnectionStrings:CyberConnectionString=Server=cyberdb;Database=CyberDb;User Id=sa;Password=Sw!12345678"  
+    ports:
+      - "80"
     depends_on:
       - cyberdb
-    ports:
-      - "8000:80"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:C:\Users\Vagel\AppData\Roaming\Microsoft\UserSecrets:ro
-      - ${APPDATA}/ASP.NET/Https:C:\Users\Vagel\AppData\Roaming\ASP.NET\Https:ro

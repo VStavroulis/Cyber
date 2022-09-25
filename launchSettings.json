@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "composeLaunchServiceName": "cyber",
+      "serviceActions": {
+        "cyber": "StartDebugging",
+        "cyberdb": "StartWithoutDebugging"
+      },
+      "composeLaunchAction": "LaunchBrowser",
+      "commandVersion": "1.0",
+      "composeLaunchUrl": "{Scheme}://{ServiceIPAddress}{ServicePort}/swagger"
+    }
+  }
+}

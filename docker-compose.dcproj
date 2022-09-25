@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Windows</DockerTargetOS>
-    <ProjectGuid>88a26fcf-ff45-4dd7-9e6c-72688fb44f93</ProjectGuid>
+    <ProjectGuid>9e573ebd-a636-4fa6-98b3-579faea39085</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://{ServiceIPAddress}{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>cyber</DockerServiceName>
