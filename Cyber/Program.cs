@@ -1,3 +1,5 @@
+using Cyber.Data;
+using Cyber.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -13,7 +15,9 @@ namespace Cyber
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build()
+                   .MigrateDatabase<ApiDbContext>() 
+                   .Run(); ;
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

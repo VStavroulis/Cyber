@@ -45,7 +45,7 @@ namespace Cyber
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
             });
-            services.AddDbContext<ApiDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApiDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("CyberConnectionString")));
             services.AddTransient<IAlertService, AlertService>();
             services.AddTransient<IIPAdressService, IPAdressService>();
             services.AddTransient<IAlertIpsService, AlertIpsService>();
