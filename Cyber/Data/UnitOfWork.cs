@@ -16,7 +16,7 @@ namespace Cyber.Data
             _dbContext = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        internal DbSet<T> GetDbSet<T>() where T : class
+        public DbSet<T> GetDbSet<T>() where T : class
         {
             return _dbContext.Set<T>();
         }
