@@ -210,7 +210,7 @@ namespace Cyber.Controllers
 
         // api/ip/APIConnect/
         [HttpGet("[action]", Name = "AlertsConsume")]
-        [ProducesResponseType(typeof(StatisticsDto), (int)System.Net.HttpStatusCode.OK)]
+        [ProducesResponseType((int)System.Net.HttpStatusCode.OK)]
         public async Task AlertsConsume()
         {
             //recordcount 625 alerts            
